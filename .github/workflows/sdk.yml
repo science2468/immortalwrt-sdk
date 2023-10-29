@@ -42,7 +42,7 @@ jobs:
         
     - name: config qbit
       run: |
-        cd openwrrt-sdk-*/
+        cd openwrt-sdk-*/
 
         ./scripts/feeds update -a
         ./scripts/feeds install -a
