@@ -44,6 +44,7 @@ jobs:
 
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+        make defconfig
         make package/luci-app-qbittorrent/qbittorrent/compile   # 编译 qBittorrent 应用程序
     - name: Upload immortalwrt firmware
       uses: actions/upload-artifact@master
