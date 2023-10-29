@@ -37,14 +37,14 @@ jobs:
       run: |
         cd immortalwrt-sdk-*/package
         git clone https://github.com/sbwml/luci-app-qbittorrent.git
-        mv luci-app-qbittorrent qbittorrent
+        
     - name: config qbit
       run: |
         cd immortalwrt-sdk-*/
 
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        make package/qbittorrent/luci-app-qbittorrent/compile   # 编译 qBittorrent 应用程序
+        make package/luci-app-qbittorrent/qbittorrent/compile   # 编译 qBittorrent 应用程序
     - name: Upload immortalwrt firmware
       uses: actions/upload-artifact@master
       with:
