@@ -51,5 +51,5 @@ jobs:
     - name: Upload immortalwrt firmware
       uses: actions/upload-artifact@master
       with:
-        name: immortalwrt-sdk
-        path: immortalwrt-sdk-23.05.0-rc4-x86-64_gcc-12.3.0_musl.Linux-x86_64/bin/packages
+        name: openwrt-sdk
+        path: openwrt-sdk-23.05.0-rc4-x86-64_gcc-12.3.0_musl.Linux-x86_64/bin/
