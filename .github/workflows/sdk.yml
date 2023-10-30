@@ -38,7 +38,7 @@ jobs:
     - name: Clone luci-app-qbittorrent
       run: |
         cd openwrt-sdk-*/package
-        git clone https://github.com/sbwml/luci-app-qbittorrent.git
+        git clone https://github.com/science2468/luci-app-qbittorrent.git
         
     - name: config qbit
       run: |
