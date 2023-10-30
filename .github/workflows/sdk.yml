@@ -46,7 +46,6 @@ jobs:
 
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        make defconfig
         
         make package/luci-app-qbittorrent/luci-app-qbittorrent/compile   # 编译 qBittorrent4.5.5 应用程序
     - name: Upload openwrt firmware
