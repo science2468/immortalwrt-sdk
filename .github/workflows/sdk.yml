@@ -46,8 +46,11 @@ jobs:
 
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+        make defconfig
+        
         sed -i 's/CONFIG_PACKAGE_luci-app-qbittorrent=m/CONFIG_PACKAGE_luci-app-qbittorrent=y/' .config
         make defconfig
+        
         make package/luci-app-qbittorrent/luci-app-qbittorrent/compile   # 编译 qBittorrent4.6.0 应用程序
     - name: Upload openwrt firmware
       uses: actions/upload-artifact@master
