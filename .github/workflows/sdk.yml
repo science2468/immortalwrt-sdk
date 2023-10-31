@@ -39,8 +39,8 @@ jobs:
       run: |
         #cd imm*/package
         cd openwrt-sdk-*/package
-        git clone https://github.com/science2468/luci-app-qbittorrent.git
-        
+        #git clone https://github.com/science2468/luci-app-qbittorrent.git
+        git clone https://github.com/sbwml/luci-app-qbittorrent.git
     - name: config qbit
       run: |
         #cd imm*/
@@ -49,7 +49,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         make defconfig
-        make package/luci-app-qbittorrent/luci-app-qbittorrent/compile V=s   # 编译 qBittorrent4.6.0 应用程序
+        make package/luci-app-qbittorrent/luci-app-qbittorrent/compile   # 编译 qBittorrent4.6.0 应用程序
     - name: Upload openwrt firmware
       uses: actions/upload-artifact@master
       with:
